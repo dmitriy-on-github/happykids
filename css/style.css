@@ -277,7 +277,9 @@ h1, h2, h3, h4, h5, h6 {
           bottom: calc(50% - 1px); } }
 
 .footer {
-  background: rgba(53, 64, 70, 0.5); }
+  background: rgba(53, 64, 70, 0.5);
+  position: relative;
+  z-index: 2; }
 
 .footer__main {
   border-bottom: 1px solid #D5C67A;
@@ -1120,9 +1122,6 @@ body {
   -ms-flex-pack: center;
   justify-content: center; }
 
-.main-block__container_big {
-  position: relative; }
-
 .main-block__content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1166,38 +1165,43 @@ body {
   .main-block__form {
     width: 100%; } }
 
-.partners {
-  padding-bottom: 200px; }
-  @media (max-width: 1620px) {
-    .partners {
-      padding-bottom: calc(50px + 150 * ((100vw - 320px) / 1300)); } }
+.main-block__icons {
+  pointer-events: none;
+  opacity: 0.4; }
+  @media (max-width: 479.98px) {
+    .main-block__icons {
+      opacity: 0.2; } }
 
-.partners__container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  gap: 25px;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap; }
-  @media (max-width: 709px) {
-    .partners__container {
-      -webkit-box-pack: center;
-      -ms-flex-pack: center;
-      justify-content: center; } }
+.main-block__item {
+  position: fixed;
+  z-index: 1; }
+  .main-block__item img {
+    width: 64px;
+    height: 64px; }
 
-.partners__item {
-  font-size: 36px;
-  font-weight: 600;
-  text-align: center;
-  color: #fff; }
-  .partners__item img {
-    max-width: 100%; }
+.main-block__item_y {
+  top: 28%;
+  left: 10%; }
+
+.main-block__item_b {
+  top: 15%;
+  left: 28%; }
+
+.main-block__item_p {
+  top: 70%;
+  left: 24%; }
+
+.main-block__item_v {
+  top: 20%;
+  right: 17%; }
+
+.main-block__item_g {
+  top: 80%;
+  right: 30%; }
+
+.main-block__item_r {
+  top: 68%;
+  right: 13%; }
 
 .how {
   padding-bottom: 100px; }
@@ -1206,6 +1210,8 @@ body {
       padding-bottom: calc(25px + 75 * ((100vw - 320px) / 1300)); } }
 
 .how__container {
+  position: relative;
+  z-index: 2;
   display: -ms-grid;
   display: grid;
   row-gap: 30px; }
@@ -1346,6 +1352,8 @@ body {
       padding-bottom: calc(25px + 75 * ((100vw - 320px) / 1300)); } }
 
 .pathway__container {
+  position: relative;
+  z-index: 2;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1490,6 +1498,8 @@ body {
       padding-bottom: calc(25px + 75 * ((100vw - 320px) / 1300)); } }
 
 .why__container {
+  position: relative;
+  z-index: 2;
   display: -ms-grid;
   display: grid;
   row-gap: 30px; }
@@ -1679,27 +1689,27 @@ body {
     -ms-transform: scale(1);
     transform: scale(1); }
     .item-review._active:nth-child(1) {
+      -webkit-transition: all 0.8s ease 0.2s;
+      -o-transition: all 0.8s ease 0.2s;
+      transition: all 0.8s ease 0.2s; }
+    .item-review._active:nth-child(2) {
       -webkit-transition: all 0.8s ease 0.4s;
       -o-transition: all 0.8s ease 0.4s;
       transition: all 0.8s ease 0.4s; }
-    .item-review._active:nth-child(2) {
-      -webkit-transition: all 0.8s ease 0.8s;
-      -o-transition: all 0.8s ease 0.8s;
-      transition: all 0.8s ease 0.8s; }
 
 .item-review__image {
   -webkit-box-flex: 0;
   -ms-flex: 0 0 44%;
   flex: 0 0 44%; }
-  .item-review__image:nth-child(1) img {
+  .item-review__image_top img {
     -o-object-position: top;
     object-position: top; }
   @media (max-width: 991.98px) {
     .item-review__image {
-      min-height: 500px; }
-      .item-review__image img {
-        -o-object-position: top;
-        object-position: top; } }
+      min-height: 500px; } }
+  @media (max-width: 500px) {
+    .item-review__image {
+      min-height: 300px; } }
 
 .item-review__body {
   display: -webkit-box;
@@ -1733,7 +1743,9 @@ body {
       padding-bottom: calc(25px + 75 * ((100vw - 320px) / 1300)); } }
 
 .contact__container {
-  text-align: center; }
+  text-align: center;
+  position: relative;
+  z-index: 2; }
 
 .contact__body {
   background: #D5C67A;

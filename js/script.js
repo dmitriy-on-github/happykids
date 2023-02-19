@@ -1,5 +1,3 @@
-
-
 // Smooth menu
 document.addEventListener("click", documentActions);
 function documentActions(e) {
@@ -38,7 +36,6 @@ const callback = function (entries, observer) {
 
 const headerObserver = new IntersectionObserver(callback);
 headerObserver.observe(headerElement);
-
 
 // Анимация при скролле
 const animItems = document.querySelectorAll('._anim-items');
