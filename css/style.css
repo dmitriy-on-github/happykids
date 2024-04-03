@@ -1460,7 +1460,7 @@ body {
   justify-content: space-between; }
   .spollers-pathway__title::after {
     content: "";
-    background: url("../../img/arrow-down_wh.svg") center/100% no-repeat;
+    background: url("../img/arrow-down_wh.svg") center/100% no-repeat;
     -webkit-box-flex: 0;
     -ms-flex: 0 0 24px;
     flex: 0 0 24px;
